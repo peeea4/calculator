@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "@/components/FC/Header";
 import { Outlet } from "react-router-dom";
 
-export const Layout = () => {
-    return (
-        <>
-            <Header />
-            <Outlet />
-        </>
-    );
-};
+import Header from "@/components/FC/Header";
+
+const Layout = () => (
+    <>
+        <Header />
+        <Outlet />
+    </>
+);
+export default Layout;

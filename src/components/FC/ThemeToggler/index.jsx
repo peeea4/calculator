@@ -1,15 +1,15 @@
-import { ThemeContext } from "@/themeContext";
 import React, { useContext } from "react";
-import ThemeTogglerWrapper from "./styled";
+import { ThemeContext } from "@/themeContext";
+
+import ThemeTogglerWrapper from "./styled.js";
 
 const ThemeToggler = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
     return (
-        <ThemeTogglerWrapper>
+        <ThemeTogglerWrapper color={theme}>
             <h3>Switch Theme</h3>
-            <select name="" id="" onChange={toggleTheme}>
+            <select onChange={toggleTheme}>
                 <option value="light">Light Theme</option>
-                <option value="colored">Colored Theme</option>
                 <option value="dark">Dark Theme</option>
             </select>
         </ThemeTogglerWrapper>
