@@ -1,0 +1,54 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:cypress/recommended"
+    ],
+    "plugins": ["prettier", "react-hooks", "cypress"],
+    "parser": "babel-eslint",
+    "env": {
+        "node": true,
+        "browser": true
+    },
+    "rules": {
+        "arrow-parens": ["error", "always"],
+        "semi": "error",
+        "quotes": ["error", "double"],
+        "prefer-destructuring": "error",
+        "indent": [2, 4],
+        "max-len": [
+            "warn",
+            {
+                "code": 150,
+                "ignoreUrls": true,
+                "ignorePattern": "import"
+            }
+        ],
+        "no-unused-vars": "warn",
+        "operator-linebreak": "warn",
+        "jsx-quotes": ["error", "prefer-double"],
+        "comma-dangle": [2, "always-multiline"],
+        "prefer-const": [
+            "error",
+            {
+                "destructuring": "any",
+                "ignoreReadBeforeAssign": false
+            }
+        ],
+        "react/prop-types": "off"
+    },
+    "overrides": [
+        {
+            "files": ["src/index.js"],
+            "rules": {
+                "react/jsx-filename-extension": "off",
+                "prettier/prettier": [
+                    "error",
+                    {
+                        "singleQuote": false
+                    }
+                ]
+            }
+        }
+    ]
+}
